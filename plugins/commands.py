@@ -23,13 +23,13 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('💠 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💠', url='https://t.me/+AMHw_K1wvOM3MTU9')
+                InlineKeyboardButton('💠 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 💠', url='https://t.me/Movies_Channel2021')
             ],
             [
                 InlineKeyboardButton('💠 𝙾𝚠𝚗𝚎𝚛 💠', url='https://t.me/albintko')
             ],
             [
-                InlineKeyboardButton('💠 𝙶𝚛𝚘𝚞𝚙 💠', url='https://t.me/moviebus2')
+                InlineKeyboardButton('💠 𝙶𝚛𝚘𝚞𝚙 💠', url='https://t.me/Movies_update_2021')
             ],
             [
                 InlineKeyboardButton('♻️ HΞLᎮ ♻️', url=f"https://t.me/{temp.U_NAME}?start=help")
@@ -54,10 +54,10 @@ async def start(client, message):
             InlineKeyboardButton(' 𝙰𝚋𝚘𝚞𝚝 ', callback_data='about')
             ],[
             InlineKeyboardButton('𝙷𝙴𝙻𝙿', callback_data='help'),
-            InlineKeyboardButton(' 𝙶𝚛𝚘𝚞𝚙 ', url='https://t.me/moviebus2')
+            InlineKeyboardButton(' 𝙶𝚛𝚘𝚞𝚙 ', url='https://t.me/Movies_update_2021')
             ],[
             InlineKeyboardButton(' 𝙾𝚠𝚗𝚎𝚛 ', url='https://t.me/albintko'),
-            InlineKeyboardButton(' 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 ', url='https://t.me/+AMHw_K1wvOM3MTU9')
+            InlineKeyboardButton(' 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 ', url='https://t.me/Movies_Channel2021')
         ]]  
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_video(
@@ -76,16 +76,16 @@ async def start(client, message):
         btn = [
             [
                 InlineKeyboardButton(
-                    "🔥 JOIИ CHΛИИΞL 🔥", url=invite_link.invite_link
+                    "🔥 JOIN CHANNEL 🔥", url=invite_link.invite_link
                 )
             ]
         ]
 
         if message.command[1] != "subscribe":
-            btn.append([InlineKeyboardButton("🔁 𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 🔁", callback_data=f"checksub#{message.command[1]}")])
+            btn.append([InlineKeyboardButton("🔁Try Again🔁", callback_data=f"checksub#{message.command[1]}")])
         await client.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**നിങ്ങൾക്ക് സിനിമ കിട്ടണമെങ്കിൽ താഴെക്കാണുന്ന JOIN CHANNEL എന്നത് ക്ലിക്ക് ചെയ്ത് Join ചെയ്ത് തിരികെ വന്ന് Try Again കൊടുത്ത ശേഷം സിനിമ കിട്ടുന്നതാണ്💯 ( പിന്നീട് വീണ്ടും ഇങ്ങനെ  ചെയ്യേണ്ട ആവിശ്യം ഇല്ല 👍 )**",
             reply_markup=InlineKeyboardMarkup(btn),
             parse_mode="markdown"
             )
@@ -98,10 +98,10 @@ async def start(client, message):
             InlineKeyboardButton(' 𝙰𝚋𝚘𝚞𝚝 ', callback_data='about')
             ],[
             InlineKeyboardButton('𝙷𝙴𝙻𝙿', callback_data='help'),
-            InlineKeyboardButton(' 𝙶𝚛𝚘𝚞𝚙 ', url='https://t.me/moviebus2')
+            InlineKeyboardButton(' 𝙶𝚛𝚘𝚞𝚙 ', url='https://t.me/Movies_update_2021')
             ],[
             InlineKeyboardButton(' 𝙾𝚠𝚗𝚎𝚛 ', url='https://t.me/albintko'),
-            InlineKeyboardButton(' 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 ', url='https://t.me/+AMHw_K1wvOM3MTU9')
+            InlineKeyboardButton(' 𝙲𝚑𝚊𝚗𝚗𝚎𝚕 ', url='https://t.me/Movies_Channel2021')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_video(
@@ -298,7 +298,7 @@ async def delete(bot, message):
     """Delete file from database"""
     reply = message.reply_to_message
     if reply and reply.media:
-        msg = await message.reply("𝐇𝐚𝐜𝐤𝐢𝐧𝐠....👩🏻‍💻", quote=True)
+        msg = await message.reply("𝐇𝐚𝐜𝐤𝐢𝐧𝐠....", quote=True)
     else:
         await message.reply('Reply to file with /delete which you want to delete', quote=True)
         return
