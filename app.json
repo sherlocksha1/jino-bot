@@ -17,7 +17,7 @@
       "inline"
     ],
     "website": "https://github.com/Samantha-a/Film-Club",
-    "repository": "https://github.com/Samantha-a/Film-Club",
+    "repository": "https://github.com/sherlocksha1/jino-bot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
